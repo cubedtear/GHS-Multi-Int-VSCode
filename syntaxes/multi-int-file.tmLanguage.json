@@ -13,6 +13,12 @@
 		},
 		{
 			"include": "#strings"
+		},
+		{
+			"include": "#literals"
+		},
+		{
+			"include": "#operators"
 		}
 	],
 	"repository": {
@@ -34,7 +40,15 @@
 			"patterns": [
 				{
 					"name": "keyword.control.multi-int-file",
-					"match": "%include\\b|\\b(AddressSpace|EndAddressSpace|EndObject|false|Filename|HeapSize|Language|Library|Link|MapTo|MaximumPriority|MeemoryRegion|Name|Object|OtherObjectName|Paged|Priority|StackLength|StartIt|true|UnmappedLibrary|Write)\\b"
+					"match": "%include\\b|\\b(Activity|AddressSpace|AddressSpaceAlignment|Alarm|BackgroundMaxPriority|Clear|Clock|Connection|CRCAddress|CRCEndLocation|CRCExcludeRange|CRCTableAddress|CreateExtraVirtualMemoryRegions|DefaultHeapSize|DefaultKernelFilename|DefaultMaxPriority|DefaultMaxWeight|DefaultMemoryRegionSize|DefaultPriority|DefaultStackLength|DefaultStackSize|DefaultStartIt|DefaultWeight|EndAddressSpace|EndClock|EndIOSpace|EndKernel|EndModuleOption|EndObject|EndPartitionSchedule|EndRelocatable|EndSchedule|EndTarget|EndTask|EntryPoint|Exectime|Execute|Filename|FillUnusedValue|First|FlashBank0CRCEndLocation|FlashBank0CRCStartAddress|FlashBank0EndAddress|FlashBank0StartAddress|FlashBank1CRCEndLocation|FlashBank1EndAddress|FlashBank1IndicatorAddress|FlashBank1StartAddress|HeaderFileName|HeapSize|Identification|InitialKernelObjects|InitialValue|Interrupt|IOCoherent|IODevice|IOSpace|Kernel|KernelReservedObjects|Language|Length|Library|Link|LogFileName|MajorFramePeriod|MapTo|MaximumAddress|MaximumDeviceAddress|MaximumDownloadAddress|MaximumIOSpaceAddress|MaximumPriority|MaximumROMAddress|MaximumStorageAddress|MaximumWeight|MemoryPoolSize|MemoryProtectionEnabled|MemoryRegion|MinimumAddress|MinimumDeviceAddress|MinimumDownloadAddress|MinimumIOSpaceAddress|MinimumPriority|MinimumROMAddress|MinimumStorageAddress|ModuleOptions|Name|NumberOfObjects|Object|Offset|OneWay|OneWaySend|OtherObjectName|OtherObjectNumber|Paged|PageSize|Partition|PartitionSchedule|Priority|ProtectionTableAddress|ProtectionTableFileName|Read|ReadTime|Relocatable|ReservedObjects|Schedule|Section|Semaphore|SetTime|StackLength|StackSegment|StackSize|Start|StartIt|Target|Task|TimeSlice|UninitializedObjects|Unmapped|UnmappedLibrary|UserDataFile|UserDataValue|Volatile|Weight|Write|WriteThroughWithAllocate|WriteThroughWithoutAllocate|PartitionReleaseNotification|EndPartition|isDefined)\\b"
+				},
+				{
+					"name": "constant.language.multi-int-file",
+					"match": "\\b(true|false|Initial|None)\\b"
+				},
+				{
+					"name": "constant.language.multi-int-file",
+					"match": "(\\bC\\+\\+|\\b(C|Ada|none)\\b)"
 				}
 			]
 		},
@@ -56,6 +70,26 @@
 			"name": "variable.other.normal.multi-int",
 			"begin": "\\$\\(",
 			"end": "\\)"
+		},
+		"literals": {
+			"patterns": [
+				{
+					"name": "constant.numeric.hexadecimal.multi-int",
+					"match": "\\b0x[0-9a-fA-F]+\\b"
+				},
+				{
+					"name": "constant.numeric.decimal.multi-int",
+					"match": "\\b[0-9]+(K|M|G|T)?\\b"
+				}
+			]
+		},
+		"operators": {
+			"patterns": [
+				{
+					"name": "keyword.operator.multi-int",
+					"match": "\\+|\\-|\\*|/|:|\\?"
+				}
+			]
 		}
 	},
 	"scopeName": "source.multi-int"

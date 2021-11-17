@@ -8,6 +8,4 @@ Provides syntax highlighting support for GHS Integration files.
 
 ## Release Notes
 
-### 0.0.1
-
-Initial release with basic keyword support.
+See [the CHANGELOG.md file](CHANGELOG.md).

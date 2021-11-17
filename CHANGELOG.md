@@ -7,6 +7,13 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 ## [Unreleased]
 
 
+## [0.0.2]
+
+- Added even more keywords from the manual
+- Added decimal and hexadecimal number literals
+- Added operators
+- Added some extra constants
+
 ## [0.0.1]
 
 - Added basic keyword support
