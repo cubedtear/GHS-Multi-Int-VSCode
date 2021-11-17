@@ -1,0 +1,36 @@
+{
+    "name": "ghs-multi-int-file-support",
+    "displayName": "GHS Multi Integration file language support",
+    "description": "Support for the Integration files of the GHS Multi compiler",
+    "version": "0.0.1",
+    "repository": "https://github.com/cubedtear/GHS-Multi-Int-VSCode",
+    "publisher": "aritzh",
+    "engines": {
+        "vscode": "^1.62.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "multi-int-file",
+                "aliases": [
+                    "GHS Multi Integration file",
+                    "multi-int-file"
+                ],
+                "extensions": [
+                    ".int"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "multi-int-file",
+                "scopeName": "source.multi-int",
+                "path": "./syntaxes/multi-int-file.tmLanguage.json"
+            }
+        ]
+    }
+}
