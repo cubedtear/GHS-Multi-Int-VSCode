@@ -6,6 +6,10 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased]
 
+## [0.1.1]
+
+- Added support for .sint files
+- Added even more keywords from the manual
 
 ## [0.0.2]
 
